@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Gym Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="video-background">
+      <video autoplay muted loop id="gymVideo">
+        <source src="WhatsApp Video 2025-05-08 at 23.56.39_aa02a27a.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+
+    <div class="quote">
+      <h2>JUMP</h2>
+      <h3>HIGHER</h3>
+      <p>
+        "Your potential is limitless. Every jump takes you closer to your peak
+        performance."
+      </p>
+    </div>
+
+    <div class="login-container">
+      <div class="login-box">
+        <div class="electric-border"></div>
+        <div class="login-header">
+          <h1>Join Us</h1>
+          <img
+            src="icon2.png.png"
+            alt="Gym Photo"
+            class="header-image"
+          />
+        </div>
+
+        <form
+          id="registerForm"
+          class="login-form"
+          action="register.php"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <div class="input-with-icon">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your name here"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your journey starts here"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Create your strength"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+                placeholder="Confirm your strength"
+              />
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" name="terms" required />
+              <span>I agree to the terms and conditions</span>
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">Register</button>
+
+          <div class="signup-link">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

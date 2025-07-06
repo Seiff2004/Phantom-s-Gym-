@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Phantom's Gym Egypt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Reuse the same styling from homepage.css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .logo span {
+            color: #fff;
+        }
+        
+        .logo-icon {
+            height: 40px;
+            width: auto;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* About Section */
+        .about-main {
+            margin-top: 80px;
+            padding: 60px 20px;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #000;
+        }
+        
+        .about-title span {
+            color: #d4af37;
+            display: block;
+            font-size: 1.8rem;
+            margin-top: 10px;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .about-text {
+            line-height: 1.8;
+        }
+        
+        .about-text h2 {
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission-values {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .mission-card {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+        
+        .mission-card h3 {
+            color: #000;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 60px 0 0;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: #fff;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #d4af37;
+        }
+        
+        .separator-line {
+            height: 1px;
+            background-color: #333;
+            margin: 40px 0 20px;
+        }
+        
+        marquee {
+            padding: 15px 0;
+            background-color: #111;
+            color: #d4af37;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="icon2.png.png" alt="Phantom Gym Icon" class="logo-icon">
+                <div class="logo">PHANTOM'S <span>GYM</span></div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">HOME</a></li>
+                    <li><a href="membership.html">MEMBERSHIP</a></li>
+                    <li><a href="index.html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="news-events.html">NEWS & EVENTS</a></li>
+                    <li><a href="index.html">SIGN UP</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <main class="about-main">
+        <div class="about-container">
+            <h1 class="about-title">About <span>Phantom's Gym Egypt</span></h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>OUR STORY</h2>
+                    <p>Founded in 1997, Phantom's Gym Egypt has grown to become the premier fitness destination in the country. What began as a single location with a passion for fitness has evolved into a network of world-class facilities serving thousands of members across Egypt.</p>
+                    
+                    <p>We believe fitness should be accessible to everyone, regardless of age, gender, or fitness level. Our mission is to provide a welcoming environment where members can pursue their health and fitness goals with confidence.</p>
+                    
+                    <h2>OUR FACILITIES</h2>
+                    <p>Each Phantom's Gym location features state-of-the-art equipment, spacious workout areas, and dedicated spaces for functional training, group classes, and personal training sessions. Our facilities are maintained to the highest standards of cleanliness and safety.</p>
+                    
+                    <h2>OUR COMMUNITY</h2>
+                    <p>What truly sets us apart is our community. Phantom's Gym isn't just a place to work out - it's a place where friendships are formed, goals are achieved, and lives are transformed. Our members inspire each other every day.</p>
+                </div>
+                
+                <div class="about-image">
+                    <img src="phantomgym.png.png" alt="Phantom's Gym Facility">
+                </div>
+            </div>
+            
+            <div class="mission-values">
+                <div class="mission-card">
+                    <h3>OUR MISSION</h3>
+                    <p>To empower our members to lead healthier lives through exceptional fitness experiences, expert guidance, and a supportive community environment.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h3>OUR VALUES</h3>
+                    <p>Integrity, Excellence, Community, Innovation, and Passion drive everything we do at Phantom's Gym Egypt.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h3>OUR TRAINERS</h3>
+                    <p>Our certified trainers bring years of experience and specialized knowledge to help you maximize your results safely and effectively.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ABOUT US</h3>
+                <p>Phantom's Gym Egypt is part of the world's most trusted fitness brand. We're committed to helping you achieve your fitness goals with top-notch facilities and expert guidance.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/yourgympage"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/yourgymaccount"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/yourgymhandl"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/yourgymchannel"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/201234567890"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                    <a href="https://www.reddit.com/r/yourgymsubreddit"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>QUICK LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>CONTACT US</h3>
+                <p><i class="fa fa-map-marker"></i> 123 Fitness Street, Cairo, Egypt</p>
+                <p><i class="fa fa-phone"></i> +20 123 456 7890</p>
+                <p><i class="fa fa-envelope"></i> info@phantomsgym.com</p>
+                <p><i class="fa fa-clock-o"></i> Open 24/7</p>
+            </div>
+        </div>
+        <div class="separator-line"></div>
+        <marquee behavior="" direction="">&copy; 2025 Phantom Gym. All rights reserved.</marquee>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '0.5rem 0';
+                header.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.background = '#000';
+            }
+        });
+    </script>
+</body>
+</html>

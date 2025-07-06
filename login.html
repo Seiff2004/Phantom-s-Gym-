@@ -1,0 +1,111 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Gym Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="video-background">
+      <video autoplay muted loop id="gymVideo">
+        <source src="WhatsApp Video 2025-05-08 at 23.56.39_02e4c910.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+
+    <div class="quote">
+      <h2>TRAIN INSANE</h2>
+      <h3>OR REMAIN THE SAME</h3>
+    </div>
+
+    <div class="login-container">
+      <div class="login-box">
+        <div class="electric-border"></div>
+        <div class="login-header">
+          <h1>Welcome Back</h1>
+          <img
+            src="icon2.png.png"
+            alt="Gym Photo"
+            class="header-image"
+          />
+        </div>
+
+        <!-- Modified form to connect to login.php -->
+        <form id="loginForm" class="login-form" action="login.php" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your journey continues here"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Enter your strength"
+              />
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="forgot_password.php" class="forgot-password">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="submit-btn">Login</button>
+
+          <div class="admin-login">
+            <a href="admin_login.php" class="admin-btn">Login as Admin</a>
+          </div>
+
+          <div class="signup-link">
+            <p>Don't have an account? <a href="register.php">Sign Up</a></p>
+          </div>
+        </form>
+        <?php
+          echo "<p> INVALID" .$_SESSION['login_error']."</p>";
+        ?>
+      </div>
+    </div>
+
+    <!-- Basic client-side validation -->
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        if (!email || !password) {
+          event.preventDefault();
+          alert('Please enter both email and password');
+        }
+      });
+    </script>
+
+    
+  </body>
+</html>

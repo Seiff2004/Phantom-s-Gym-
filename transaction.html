@@ -1,0 +1,243 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Phantom's Gym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="icon2.png.png" alt="Phantom Gym Icon" class="logo-icon">
+                <div class="logo">PHANTOM'S <span>GYM</span></div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="homepage2.html">HOME</a></li>
+                    <li><a href="membership.html">MEMBERSHIP</a></li>
+                    <li><a href="index.html">CONTACT US</a></li>
+                    <li><a href="news-events.html">NEWS & EVENTS</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="transaction-main">
+        <div class="transaction-container">
+            <h1 class="transaction-title">Select Payment <span>Method</span></h1>
+            
+            <div class="payment-options">
+                <div class="payment-method active" data-method="cash">
+                    <div class="method-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="method-info">
+                        <h3>Cash Payment</h3>
+                        <p>Pay in person at our gym location</p>
+                    </div>
+                    <div class="method-select">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="payment-method" data-method="visa">
+                    <div class="method-icon">
+                        <i class="fab fa-cc-visa"></i>
+                    </div>
+                    <div class="method-info">
+                        <h3>Credit/Debit Card</h3>
+                        <p>Visa, Mastercard, or other cards</p>
+                    </div>
+                    <div class="method-select">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="payment-method" data-method="instapay">
+                    <div class="method-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="method-info">
+                        <h3>Instapay</h3>
+                        <p>Fast and secure mobile payment</p>
+                    </div>
+                    <div class="method-select">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-forms">
+                <!-- Cash Payment Form -->
+                <div class="payment-form active" id="cash-form">
+                    <div class="form-notice">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Please visit our gym location to complete your cash payment. Your membership will be activated immediately upon payment.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="cash-branch">Preferred Branch</label>
+                        <select id="cash-branch" required>
+                            <option value="">Select branch</option>
+                            <option value="zahraa">Zahraa Naser City</option>
+                            <option value="rehab">Rehab City</option>
+                            <option value="maadi">Maadi</option>
+                            <option value="madinaty">Madinaty</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Confirm Cash Payment</button>
+                </div>
+                
+                <!-- Card Payment Form -->
+                <div class="payment-form" id="visa-form">
+                    <h2>Card Details</h2>
+                    <form id="card-form">
+                        <div class="form-group">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                            <div class="card-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry-date">Expiry Date</label>
+                                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Pay with Card</button>
+                    </form>
+                </div>
+                
+                <!-- Instapay Payment Form -->
+                <div class="payment-form" id="instapay-form">
+                    <div class="form-notice">
+                        <i class="fas fa-info-circle"></i>
+                        <p>You'll be redirected to Instapay secure payment page to complete your transaction.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="instapay-phone">Mobile Number</label>
+                        <input type="tel" id="instapay-phone" placeholder="01XXXXXXXXX" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Proceed to Instapay</button>
+                </div>
+            </div>
+            
+            <div class="security-info">
+                <i class="fas fa-lock"></i>
+                <span>All transactions are secure and encrypted</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ABOUT US</h3>
+                <p>Phantom's Gym Egypt is part of the world's most trusted fitness brand. We're committed to helping you achieve your fitness goals with top-notch facilities and expert guidance.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/yourgympage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/yourgymaccount" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/yourgymhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/yourgymchannel" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/201234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.reddit.com/r/yourgymsubreddit" target="_blank" title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>QUICK LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="homepage2.html">Home</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>CONTACT US</h3>
+                <p><i class="fa fa-map-marker"></i> 123 Fitness Street, Cairo, Egypt</p>
+                <p><i class="fa fa-phone"></i> +20 123 456 7890</p>
+                <p><i class="fa fa-envelope"></i> info@phantomsgym.com</p>
+                <p><i class="fa fa-clock-o"></i> Open 24/7</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Phantom's Gym Egypt. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Payment method selection
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    // Remove active class from all methods
+                    paymentMethods.forEach(m => {
+                        m.classList.remove('active');
+                        document.getElementById(`${m.dataset.method}-form`).classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked method
+                    this.classList.add('active');
+                    document.getElementById(`${this.dataset.method}-form`).classList.add('active');
+                });
+            });
+            
+            // Form submission handlers
+            document.getElementById('card-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Card payment processed successfully!');
+                // window.location.href = 'confirmation.html';
+            });
+            
+            document.querySelector('#cash-form button').addEventListener('click', function(e) {
+                e.preventDefault();
+                const branch = document.getElementById('cash-branch').value;
+                if (!branch) {
+                    alert('Please select a branch');
+                    return;
+                }
+                alert(`Cash payment confirmed! Please visit our ${branch} branch to complete your payment.`);
+                // window.location.href = 'confirmation.html';
+            });
+            
+            document.querySelector('#instapay-form button').addEventListener('click', function(e) {
+                e.preventDefault();
+                const phone = document.getElementById('instapay-phone').value;
+                if (!phone) {
+                    alert('Please enter your mobile number');
+                    return;
+                }
+                alert(`You will be redirected to Instapay for payment. A confirmation will be sent to ${phone}`);
+                // window.location.href = 'instapay-redirect.html';
+            });
+        });
+    </script>
+</body>
+</html>

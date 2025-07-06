@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Navigation - Phantom's Gym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="navigate.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="icon2.png.png" alt="Phantom Gym Icon" class="logo-icon">
+                <div class="logo">PHANTOM'S <span>GYM</span></div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="homepage2.html">HOME</a></li>
+                     
+                    <li><a href="membership.html">MEMBERSHIP</a></li>
+                    <li><a href="index.html">CONTACT US</a></li>
+                    
+                    <li><a href="news-events.html">NEWS & EVENTS</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="location-main">
+        <div class="location-container" id="location-container">
+            <!-- Content will be loaded via JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ABOUT US</h3>
+                <p>Phantom's Gym Egypt is part of the world's most trusted fitness brand. We're committed to helping you achieve your fitness goals with top-notch facilities and expert guidance.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/yourgympage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/yourgymaccount" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/yourgymhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/yourgymchannel" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/201234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.reddit.com/r/yourgymsubreddit" target="_blank" title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>QUICK LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="homepage2.html">Home</a></li>
+                    
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                     
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>CONTACT US</h3>
+                <p><i class="fa fa-map-marker"></i> 123 Fitness Street, Cairo, Egypt</p>
+                <p><i class="fa fa-phone"></i> +20 123 456 7890</p>
+                <p><i class="fa fa-envelope"></i> info@phantomsgym.com</p>
+                <p><i class="fa fa-clock-o"></i> Open 24/7</p>
+            </div>
+        </div>
+        <div class="separator-line"></div>
+        <marquee behavior="" direction="">&copy; 2025 Phantom Gym. All rights reserved.</marquee>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const locationId = urlParams.get('location');
+            
+            const locations = {
+                zahraa: {
+                    name: "madinaty",
+                    address: "255 Fitness Street, madinaty",
+                    phone: "+20 100 123 4567",
+                    hours: "Open 24/7",
+                    mapUrl: "https://maps.google.com/maps?q=Zahraa+Naser+City+Gym&output=embed"
+                },
+                rehab: {
+                    name: "Rehab City",
+                    address: "456 Workout Avenue, Rehab City",
+                    phone: "+20 100 765 4321",
+                    hours: "5:00 AM - 12:00 AM",
+                    mapUrl: "https://maps.google.com/maps?q=Rehab+City+Gym&output=embed"
+                },
+                maadi: {
+                    name: "Maadi Branch",
+                    address: "789 Muscle Road, Maadi",
+                    phone: "+20 100 987 6543",
+                    hours: "6:00 AM - 11:00 PM",
+                    mapUrl: "https://maps.google.com/maps?q=Maadi+Gym&output=embed"
+                },
+                madinaty: {
+                    name: "Madinaty Branch",
+                    address: "321 Fitness Lane, Madinaty",
+                    phone: "+20 100 456 7890",
+                    hours: "Open 24/7",
+                    mapUrl: "https://maps.google.com/maps?q=Madinaty+Gym&output=embed"
+                }
+            };
+        
+            const location = locations[locationId] || locations.zahraa;
+            
+            document.getElementById('location-container').innerHTML = `
+                <h1 class="location-title">${location.name} Location</h1>
+                <div class="location-info">
+                    <div class="location-map">
+                        <iframe src="${location.mapUrl}" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="location-details">
+                        <h2>Branch Details</h2>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <div class="detail-text">
+                                <h4>Address</h4>
+                                <p>${location.address}</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa fa-phone"></i></div>
+                            <div class="detail-text">
+                                <h4>Phone</h4>
+                                <p>${location.phone}</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa fa-clock"></i></div>
+                            <div class="detail-text">
+                                <h4>Operating Hours</h4>
+                                <p>${location.hours}</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa fa-car"></i></div>
+                            <div class="detail-text">
+                                <h4>Parking</h4>
+                                <p>Free parking available</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa fa-dumbbell"></i></div>
+                            <div class="detail-text">
+                                <h4>Access</h4>
+                                <p>24/7 Access for members</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.title = `${location.name} - Phantom's Gym`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom's Gym Egypt - Memberships</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="membership.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="icon2.png.png" alt="Phantom Gym Icon" class="logo-icon">
+                <div class="logo">PHANTOM'S <span>GYM</span></div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="homepage2.html">HOME</a></li>
+                    <li><a href="membership.html">MEMBERSHIP</a></li>
+                    <li><a href="index.html">CONTACT US</a></li>
+                    <li><a href="news-events.html">NEWS & EVENTS</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="background-wrapper">
+        <main class="membership-main">
+            <h1 class="title">MEMBERSHIPS</h1>
+
+            <div class="grid">
+                <!-- Card 1 -->
+                <div class="card yellow">
+                    <img src="gym-zahraa-design-5.png" alt="Zahraa Naser City">
+                    <div class="card-content">
+                        <h3>Zahraa Naser City</h3>
+                        <div class="card-actions">
+                            <a href="navigate.html" class="nav-btn"><i class="fa fa-location-arrow"></i> Navigate</a>
+                            <a href="plane.html" class="plans-btn"><i class="fa fa-sliders-h"></i> Plans</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card dark">
+                    <img src="khatameyaa .png" alt="Rehab City">
+                    <div class="card-content">
+                        <h3>Rehab City</h3>
+                        <div class="card-actions">
+                            <a href="naviagte2.html" class="nav-btn"><i class="fa fa-location-arrow"></i> Navigate</a>
+                            <a href="plane2.html" class="plans-btn"><i class="fa fa-sliders-h"></i> Plans</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card yellow">
+                    <img src="a-maaadi-gym.png" alt="Maadi">
+                    <div class="card-content">
+                        <h3>Maadi</h3>
+                        <div class="card-actions">
+                            <a href="navigate3.html" class="nav-btn"><i class="fa fa-location-arrow"></i> Navigate</a>
+                            <a href="plane3.html" class="plans-btn"><i class="fa fa-sliders-h"></i> Plans</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card dark">
+                    <img src="madinty.png" alt="Madinaty">
+                    <div class="card-content">
+                        <h3>Madinaty</h3>
+                        <div class="card-actions">
+                            <a href="navigate4.html" class="nav-btn"><i class="fa fa-location-arrow"></i> Navigate</a>
+                            <a href="plane4.html" class="plans-btn"><i class="fa fa-sliders-h"></i> Plans</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>ABOUT US</h3>
+                    <p>Phantom's Gym Egypt is part of the world's most trusted fitness brand. We're committed to helping you achieve your fitness goals with top-notch facilities and expert guidance.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/yourgympage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/yourgymaccount" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/yourgymhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/yourgymchannel" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/201234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.reddit.com/r/yourgymsubreddit" target="_blank" title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>QUICK LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="homepage2.html">Home</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="index.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>CONTACT US</h3>
+                    <p><i class="fa fa-map-marker"></i> 123 Fitness Street, Cairo, Egypt</p>
+                    <p><i class="fa fa-phone"></i> +20 123 456 7890</p>
+                    <p><i class="fa fa-envelope"></i> info@goldsgymegypt.com</p>
+                    <p><i class="fa fa-clock-o"></i> Open 24/7</p>
+                </div>
+            </div>
+            <div class="separator-line"></div>
+            <marquee behavior="" direction="">&copy; 2025 Phantom Gym. All rights reserved.</marquee>
+        </footer>
+    </div>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '0.5rem 0';
+                header.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.background = '#000';
+            }
+        });
+    </script>
+</body>
+</html>

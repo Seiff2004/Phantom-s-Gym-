@@ -1,0 +1,466 @@
+ /* Base Styles - Same as plan.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles - Same as plan.css */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d4af37;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #fff;
+}
+
+.logo-icon {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Transaction Main Content */
+.transaction-main {
+    margin-top: 80px;
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 80px);
+}
+
+.transaction-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.transaction-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.transaction-title span {
+    color: #d4af37;
+    display: inline-block;
+}
+
+.payment-options {
+    margin-bottom: 40px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #eee;
+    position: relative;
+}
+
+.payment-method:hover {
+    border-color: #d4af37;
+}
+
+.payment-method.active {
+    border-color: #d4af37;
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.method-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.method-icon i {
+    font-size: 1.5rem;
+    color: #d4af37;
+}
+
+.method-info {
+    flex: 1;
+}
+
+.method-info h3 {
+    color: #000;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.method-info p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.method-select {
+    color: #d4af37;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.payment-method.active .method-select {
+    opacity: 1;
+}
+
+.payment-forms {
+    margin-bottom: 30px;
+}
+
+.payment-form {
+    display: none;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form.active {
+    display: block;
+}
+
+.payment-form h2 {
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.payment-form h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #d4af37;
+    bottom: 0;
+    left: 0;
+}
+
+.form-notice {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(212, 175, 55, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.form-notice i {
+    color: #d4af37;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.form-notice p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.card-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-icons i {
+    color: #aaa;
+    font-size: 1.8rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #d4af37;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #c9a227;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.security-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.security-info i {
+    font-size: 1.2rem;
+}
+
+/* Footer Styles - Same as plan.css */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #d4af37;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #d4af37;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-col p {
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(212, 175, 55, 0.2);
+    color: #fdfdfc;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.social-links a:hover {
+    background-color: #d4af37;
+    color: #000;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.social-links i {
+    font-size: 1.1rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+        margin-top: 20px;
+    }
+    
+    .transaction-main {
+        margin-top: 120px;
+        padding: 40px 20px;
+    }
+    
+    .payment-method {
+        padding: 15px;
+    }
+    
+    .method-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .transaction-title {
+        font-size: 1.8rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .method-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .method-info p {
+        font-size: 0.8rem;
+    }
+}

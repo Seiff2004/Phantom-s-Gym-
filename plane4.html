@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans - Phantom's Gym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="plane.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="icon2.png.png" alt="Phantom Gym Icon" class="logo-icon">
+                <div class="logo">PHANTOM'S <span>GYM</span></div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="homepage2.html">HOME</a></li>
+                    <li><a href="membership.html">MEMBERSHIP</a></li>
+                    <li><a href="index.html">CONTACT US</a></li>
+                    <li><a href="news-events.html">NEWS & EVENTS</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="plans-main">
+        <div class="plans-container" id="plans-container">
+            <!-- Content will be loaded via JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ABOUT US</h3>
+                <p>Phantom's Gym Egypt is part of the world's most trusted fitness brand. We're committed to helping you achieve your fitness goals with top-notch facilities and expert guidance.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/yourgympage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/yourgymaccount" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/yourgymhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/yourgymchannel" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/201234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.reddit.com/r/yourgymsubreddit" target="_blank" title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>QUICK LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="homepage2.html">Home</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>CONTACT US</h3>
+                <p><i class="fa fa-map-marker"></i> 123 Fitness Street, Cairo, Egypt</p>
+                <p><i class="fa fa-phone"></i> +20 123 456 7890</p>
+                <p><i class="fa fa-envelope"></i> info@phantomsgym.com</p>
+                <p><i class="fa fa-clock-o"></i> Open 24/7</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Phantom's Gym Egypt. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const locationId = urlParams.get('location');
+            
+            const locations = {
+                zahraa: "Zahraa Naser City",
+                rehab: "Rehab City", 
+                maadi: "Maadi",
+                madinaty: "Madinaty"
+            };
+            
+            const locationName = locations[locationId] || "Our Gym";
+            
+            document.getElementById('plans-container').innerHTML = `
+                <h1 class="plans-title">Membership Plans <span>${locationName}</span></h1>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Basic</h3>
+                            <div class="plan-price">EGP 6979<span>/month</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Access to ${locationName} branch</li>
+                            <li><i class="fas fa-check"></i> Standard equipment</li>
+                            <li><i class="fas fa-check"></i> Open gym hours</li>
+                            <li><i class="fas fa-check"></i> 1 free trainer session</li>
+                            <li><i class="fas fa-times"></i> Group classes</li>
+                            <li><i class="fas fa-times"></i> 24/7 access</li>
+                        </ul>
+                        <a href="transaction.html?plan=basic&location=${locationId}&price=6979" class="plan-btn">Choose Plan</a>
+                    </div>
+                    
+                    <div class="plan-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="plan-header">
+                            <h3>Premium</h3>
+                            <div class="plan-price">EGP 8686<span>/month</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Access to all branches</li>
+                            <li><i class="fas fa-check"></i> Premium equipment</li>
+                            <li><i class="fas fa-check"></i> 24/7 access</li>
+                            <li><i class="fas fa-check"></i> 3 free trainer sessions</li>
+                            <li><i class="fas fa-check"></i> Group classes included</li>
+                            <li><i class="fas fa-times"></i> Spa access</li>
+                        </ul>
+                        <a href="transaction.html?plan=premium&location=${locationId}&price=8686" class="plan-btn">Choose Plan</a>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>VIP</h3>
+                            <div class="plan-price">EGP 7987<span>/month</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> All Premium benefits</li>
+                            <li><i class="fas fa-check"></i> Unlimited trainer sessions</li>
+                            <li><i class="fas fa-check"></i> Personal locker</li>
+                            <li><i class="fas fa-check"></i> Sauna & spa access</li>
+                            <li><i class="fas fa-check"></i> Nutrition plan</li>
+                            <li><i class="fas fa-check"></i> Priority booking</li>
+                        </ul>
+                        <a href="transaction.html?plan=vip&location=${locationId}&price=7987" class="plan-btn">Choose Plan</a>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

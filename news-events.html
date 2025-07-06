@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events - Phantom's Gym Egypt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        /* Background Wrapper Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .background-wrapper {
+            background-image: url('background img memb.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .background-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: 0;
+        }
+
+        /* Content Container */
+        .content-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Card Styles */
+        .news-section {
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #d4af37;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+        
+        .card {
+            border: 1px solid rgba(221, 221, 221, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border-color: #d4af37;
+            background: rgba(255, 255, 255, 1);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: #000;
+            font-size: 1.5rem;
+        }
+        
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .card-date {
+            display: block;
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .cards {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+                gap: 1.5rem;
+            }
+            
+            .card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Wrapper -->
+    <div class="background-wrapper">
+        <!-- Content Container -->
+        <div class="content-container">
+            <!-- Phantom Gym Header -->
+            <header>
+                <div class="header-container">
+                    <div class="logo-container">
+                        <img src="icon2.png.png" alt="Phantom Gym Icon" class="logo-icon">
+                        <div class="logo">PHANTOM'S <span>GYM</span></div>
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="homepage2.html">HOME</a></li>
+                            
+                            <li><a href="membership.html">MEMBERSHIP</a></li>
+                            <li><a href="index.html">CONTACT US</a></li>
+                             
+                            <li><a href="news-events.html" class="active">NEWS & EVENTS</a></li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- News & Events Section -->
+            <section class="news-section">
+                <div class="section-title">
+                    <h2>NEWS & EVENTS</h2>
+                </div>
+                
+                <div class="cards">
+                    
+                        <div class="card">
+                            <img src="https://dk.gymshark.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F8urtyqugdt2l%2FfIOvOyiWNuyVnlhs7LnFt%2F9d2b2df51fdce86e93c0d1b0d28afc1e%2Fdesktop-cbum-back-workout.jpg&w=1920&q=85" alt="Workout">
+                            <div class="card-content">
+                                <span class="card-date">June 15, 2024</span>
+                                <h3>New Workout Tips</h3>
+                                <p>Get the best out of your gym session with our top trainer recommendations for summer body transformation.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     
+                        <div class="card">
+                            <img src="https://cairogyms.com/wp-content/uploads/2023/02/296153988_361975882777297_2350761174290291433_n.jpg" alt="Gym Building">
+                            <div class="card-content">
+                                <span class="card-date">Coming July 2024</span>
+                                <h3>New Branch Opening</h3>
+                                <p>Come join us at our brand-new location in New Cairo with state-of-the-art equipment and facilities!</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     
+                        <div class="card">
+                            <img src="https://thesportzplanet.com/wp-content/uploads/2024/05/Fitness-and-Health.jpg" alt="Health & Fitness">
+                            <div class="card-content">
+                                <span class="card-date">May 30, 2024</span>
+                                <h3>Health & Fitness Tips</h3>
+                                <p>Discover expert advice on nutrition, recovery protocols, and staying fit during the summer heat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Fitness Class">
+                            <div class="card-content">
+                                <span class="card-date">Starting June 1</span>
+                                <h3>Upcoming Fitness Classes</h3>
+                                <p>Join our exciting new Zumba, Yoga, and HIIT classes with certified instructors this month!</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/id/1395337483/photo/sports-and-gym-activities.jpg?s=612x612&w=0&k=20&c=lev6DFIvb5CVjdxSxuURswdZYLNHZPT4Y44iUkgm2q4=" alt="Fitness Challenge">
+                            <div class="card-content">
+                                <span class="card-date">June Challenge</span>
+                                <h3>30-Day Fitness Challenges</h3>
+                                <p>Take on our summer body challenge and track your progress to win personal training packages!</p>
+                            </div>
+                        </div>
+                    </a>
+ 
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Competitions">
+                            <div class="card-content">
+                                <span class="card-date">June 28-29</span>
+                                <h3>Summer Bodybuilding Classic</h3>
+                                <p>Show your strength in our annual summer bodybuilding and powerlifting championship!</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Phantom Gym Footer -->
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-col">
+                        <h3>ABOUT US</h3>
+                        <p>Phantom's Gym Egypt is part of the world's most trusted fitness brand. We're committed to helping you achieve your fitness goals with top-notch facilities and expert guidance.</p>
+                         <div class="social-links">
+                    <a href="https://www.facebook.com/yourgympage"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/yourgymaccount"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/yourgymhandl"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/yourgymchannel"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/201234567890"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                    <a href="https://www.reddit.com/r/yourgymsubreddit"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+                </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>QUICK LINKS</h3>
+                        <ul class="footer-links">
+                            <li><a href="homepage2.html">Home</a></li>
+                            
+                            <li><a href="membership.html">Membership</a></li>
+                            <li><a href="index.html">Contact Us</a></li>
+                             
+                             
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>CONTACT US</h3>
+                        <p><i class="fa fa-map-marker"></i> 123 Fitness Street, Cairo, Egypt</p>
+                        <p><i class="fa fa-phone"></i> +20 123 456 7890</p>
+                        <p><i class="fa fa-envelope"></i> info@phantomsgym.com</p>
+                        <p><i class="fa fa-clock-o"></i> Open 24/7</p>
+                    </div>
+                </div>
+                <div class="separator-line"></div>
+                <marquee behavior="" direction="">&copy; 2025 Phantom Gym. All rights reserved.</marquee>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '0.5rem 0';
+                header.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.background = '#000';
+            }
+        });
+
+        // Card Animation on Scroll
+        const cards = document.querySelectorAll('.card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
